@@ -11,6 +11,6 @@ const files = [
 ];
 
 let css = files.map(file => fs.readFileSync(file, 'utf8')).join('\n\n');
-fs.writeFileSync('dist/mylib.css', css);
+fs.writeFileSync('dist/dry.css', css);
 
-console.log('Built mylib.css –', css.length, 'bytes');
+console.log('Built dry.css –', css.length, 'bytes');

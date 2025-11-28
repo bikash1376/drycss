@@ -2,3 +2,21 @@ Dry CSS is a tiny css library that doesnt use any javascript and it mimics boots
 
 Well, why not use tailwind or bootstrap then?
 Sorry, I don't have an answer to this question. I just made this for fun.
+
+
+# Installation
+
+You can download the css file from dist folder and link it in your html file like below
+
+```bash
+cd dry-css
+```
+
+```javascript
+node build.js
+```
+
+Link the generated css file in your html file
+```html
+<link rel="stylesheet" href="dist/dry.css">
+```
