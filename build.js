@@ -1,5 +1,6 @@
-
 const fs = require('fs');
+const path = require('path');
+
 const files = [
   'src/reset.css',
   'src/theme.css',
@@ -11,6 +12,13 @@ const files = [
 ];
 
 let css = files.map(file => fs.readFileSync(file, 'utf8')).join('\n\n');
-fs.writeFileSync('dist/dry.css', css);
+
+const distDir = path.join(__dirname, 'dist');
+
+if (!fs.existsSync(distDir)) {
+  fs.mkdirSync(distDir);
+}
+
+fs.writeFileSync(path.join(distDir, 'dry.css'), css);
 
 console.log('Built dry.css –', css.length, 'bytes');
