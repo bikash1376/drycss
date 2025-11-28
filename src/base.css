@@ -1,0 +1,17 @@
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: var(--fs-base);
+  color: var(--clr-text);
+  background: var(--clr-bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--clr-primary);
+  text-decoration: none;
+  
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,34 @@
+/* Container – the one you’ll use on literally every page */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;      /* ~16px */
+  padding-right: 1rem;     /* ~16px */
+}
+
+/* Responsive max-width breakpoints (feel exactly like Tailwind) */
+@media (min-width: 640px)  { .container { max-width: 640px; } }
+@media (min-width: 768px)  { .container { max-width: 768px; } }
+@media (min-width: 1024px) { .container { max-width: 1024px; } }
+@media (min-width: 1280px) { .container { max-width: 1280px; } }
+@media (min-width: 1536px) { .container { max-width: 1536px; } }
+
+/* Optional tighter containers */
+.container-sm { max-width: 640px; }
+.container-md { max-width: 768px; }
+.container-lg { max-width: 1024px; }
+.container-xl { max-width: 1280px; }
+
+/* Fluid variant – never exceeds viewport, great for landing pages */
+.container-fluid {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Remove side padding when you want edge-to-edge content */
+.container-full { padding-left: 0; padding-right: 0; }

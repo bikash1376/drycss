@@ -1,0 +1,244 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+  /* Colors */
+  --clr-primary: #000000;
+  --clr-primary-hover: #302f2f;
+  --clr-danger: #e74c3c;
+  --clr-success: #27ae60;
+  --clr-gray-100: #f8f9fa;
+  --clr-gray-900: #212529;
+  --clr-text: #333;
+  --clr-bg: #fff;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  ;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 3rem;
+
+  /* Typography */
+  --fs-base: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+
+  /* Font weights */
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: var(--fs-base);
+  color: var(--clr-text);
+  background: var(--clr-bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--clr-primary);
+  text-decoration: none;
+  
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container – the one you’ll use on literally every page */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;      /* ~16px */
+  padding-right: 1rem;     /* ~16px */
+}
+
+/* Responsive max-width breakpoints (feel exactly like Tailwind) */
+@media (min-width: 640px)  { .container { max-width: 640px; } }
+@media (min-width: 768px)  { .container { max-width: 768px; } }
+@media (min-width: 1024px) { .container { max-width: 1024px; } }
+@media (min-width: 1280px) { .container { max-width: 1280px; } }
+@media (min-width: 1536px) { .container { max-width: 1536px; } }
+
+/* Optional tighter containers */
+.container-sm { max-width: 640px; }
+.container-md { max-width: 768px; }
+.container-lg { max-width: 1024px; }
+.container-xl { max-width: 1280px; }
+
+/* Fluid variant – never exceeds viewport, great for landing pages */
+.container-fluid {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Remove side padding when you want edge-to-edge content */
+.container-full { padding-left: 0; padding-right: 0; }
+
+
+.h-display {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: var(--fw-bold);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+.h1 { font-size: 2.5rem; }
+.h2 { font-size: 2rem; }
+.h3 { font-size: 1.75rem; }
+.h4 { font-size: 1.5rem; }
+.h5 { font-size: 1.25rem; }
+.h6 { font-size: 1.1rem; }
+
+/* Optional text styles */
+.text-center { text-align: center; }
+.text-muted { color: #666; font-weight: var(--fw-normal); }
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: var(--space-sm) var(--space-lg);  
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-base);
+  border: none;
+  border-radius: var(--radius-md);         
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-sm { 
+  padding: var(--space-xs) var(--space-md); 
+  font-size: var(--fs-sm); 
+}
+
+.btn-lg { 
+  padding: var(--space-md) var(--space-xl); 
+  font-size: var(--fs-lg); 
+}
+
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded    { border-radius: var(--radius-md); }   
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-full { border-radius: 9999px; }
+
+
+.btn-primary {
+  background: var(--clr-primary);
+  color: white;
+}
+.btn-primary:hover {
+  background: var(--clr-primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--clr-primary);
+  color: var(--clr-primary);
+}
+.btn-outline:hover {
+  background: var(--clr-primary);
+  color: white;
+}
+
+.btn-danger {
+  background: var(--clr-danger);
+  color: white;
+}
+.btn-danger:hover {
+  background: #c0392b;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--clr-text);
+}
+.btn-ghost:hover {
+  background: var(--clr-gray-100);
+}
+
+@media (max-width: 640px) {
+  .btn-block { width: 100%; }
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.card-header {
+  padding: var(--space-lg);
+  border-bottom: 1px solid #eee;
+}
+
+.card-body {
+  padding: var(--space-lg);
+}
+
+.card-footer {
+  padding: var(--space-lg);
+  background: var(--clr-gray-100);
+  border-top: 1px solid #eee;
+}

@@ -1,0 +1,35 @@
+:root {
+  /* Colors */
+  --clr-primary: #000000;
+  --clr-primary-hover: #302f2f;
+  --clr-danger: #e74c3c;
+  --clr-success: #27ae60;
+  --clr-gray-100: #f8f9fa;
+  --clr-gray-900: #212529;
+  --clr-text: #333;
+  --clr-bg: #fff;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  ;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 3rem;
+
+  /* Typography */
+  --fs-base: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+
+  /* Font weights */
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+}
